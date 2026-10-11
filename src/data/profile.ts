@@ -13,11 +13,10 @@ export const profile = {
   location: 'Noida, India',
   email: 'amex4477@gmail.com',
 
-  // PLACEHOLDER: your production URL, no trailing slash. Used for canonical, OG, sitemap.
-  siteUrl: 'https://your-domain.example',
+  // Production URL, no trailing slash. Used for canonical, OG, sitemap.
+  siteUrl: 'https://amex4.github.io/portfolio-web',
   linkedin: 'https://www.linkedin.com/in/ameya-srivastava-040997196',
-  // PLACEHOLDER: the resume PDF lists "GitHub" but not the URL.
-  github: 'https://github.com/YOUR-GITHUB-HANDLE',
+  github: 'https://github.com/amex4',
   // PLACEHOLDER: drop your PDF at public/Ameya-Srivastava-Resume.pdf
   resumeUrl: '/Ameya-Srivastava-Resume.pdf',
   // PLACEHOLDER: 1200x630 PNG at public/og-image.png

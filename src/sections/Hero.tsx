@@ -44,7 +44,12 @@ export function Hero() {
           <ButtonLink href="#work" icon={<ArrowRight />}>
             View work
           </ButtonLink>
-          <ButtonLink href={profile.resumeUrl} variant="ghost" download icon={<Download />}>
+          <ButtonLink
+            href={`${import.meta.env.BASE_URL}${profile.resumeUrl.replace(/^\//, '')}`}
+            variant="ghost"
+            download
+            icon={<Download />}
+          >
             Download resume
           </ButtonLink>
           <ButtonLink href="#contact" variant="ghost" icon={<Mail />}>

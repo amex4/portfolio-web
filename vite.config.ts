@@ -4,6 +4,8 @@ import { defineConfig } from 'vite';
 import { seo } from './vite-plugins/seo';
 
 export default defineConfig({
+  // GitHub Pages serves this repo at /portfolio-web/. Local dev stays at /.
+  base: process.env.GITHUB_ACTIONS ? '/portfolio-web/' : '/',
   plugins: [react(), tailwindcss(), seo()],
   build: {
     target: 'es2022',
