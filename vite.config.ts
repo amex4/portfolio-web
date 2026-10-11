@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import { seo } from './vite-plugins/seo';
 
-export default defineConfig({
-  // GitHub Pages serves this repo at /portfolio-web/. Local dev stays at /.
-  base: process.env.GITHUB_ACTIONS ? '/portfolio-web/' : '/',
+export default defineConfig(({ command }) => ({
+  // GitHub Pages serves the production build at /portfolio-web/. Dev stays at /.
+  base: command === 'build' ? '/portfolio-web/' : '/',
   plugins: [react(), tailwindcss(), seo()],
   build: {
     target: 'es2022',
@@ -20,4 +20,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));
